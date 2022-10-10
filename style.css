@@ -1,0 +1,386 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,700;1,200&family=Lobster&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  font-size: 62.5%;
+}
+body{
+    width: 100vw;
+    background-color: rgb(10, 10, 10, 0.9);
+    font-family: 'Azeret Mono', monospace;
+}
+/* Navigation */
+
+header {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: rgba(2, 2, 2, 0.7);
+  box-shadow: 0px 0px 2px black;
+  position:sticky;
+  top:0;
+  z-index: 100;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url(./images/album-image.jpg),
+  linear-gradient(180deg, black 50%, transparent 100%);
+  filter: blur(5px) brightness(38%);
+  background-size: cover;
+  background-position: center;
+}
+.log img {
+  width: 50px;
+  height: 50px;
+}
+.icon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.icon ul {
+  display: flex;
+  list-style: none;
+}
+.icon li {
+  padding: 0 10px;
+}
+.icon a {
+  color: aliceblue;
+}
+.burger-bar button {
+  background-color: transparent;
+  border: none;
+  color: aliceblue;
+  font-size: 24px;
+  cursor: pointer;
+}
+.burger:before {
+  content: "\f0c9";
+}
+
+/* Common styling for all sections */
+main {
+  width: 80%;
+  margin:2rem auto;
+}
+section.one, section.two, footer {
+  margin: 6rem 0;
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+.footer-section h4, section.two h4 {
+  font-size: 1.7 rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.footer-section p, section.two p, .column-one p {
+  font-style: italic;
+  font-size: 1rem;
+}
+.fab,
+.fas {
+  font-size: 2rem;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+/*  Album presentation section */
+
+section.one {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  width: 50%;
+}
+.container:nth-of-type(1){
+  margin-right: 5rem;
+}
+.container p{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    font-style: italic;
+    font-size: 1.5rem;
+    text-transform: none;
+    margin: 0 1rem 0 0;
+}
+.green  {
+  color:rgb(109, 165, 137);
+  font-weight: bold;
+}
+.vertical-text {
+  display:flex;
+}
+.container:nth-of-type(2) {
+  margin-left: 2rem;
+}
+
+img.album-img {
+  width: 100%;
+}
+img.round {
+  width: 10rem;
+  border-radius: 50%;
+  margin: 2rem 0;
+}
+.button button {
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+.button button:first-of-type {
+  background-color: rgb(109, 165, 137);
+  border: none;
+  margin-right: 2rem;
+}
+.button button:last-of-type {
+  background-color: transparent;
+  border: 1px solid white;
+}
+.container h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #f1f1f1;
+  -webkit-text-fill-color: transparent;
+} 
+
+
+
+/* Stream it your way section */
+
+table {
+  font-size: 1.5rem;
+  padding: 3rem 0;
+}
+td {
+  border: 0.2rem solid white;
+  padding: 2rem;
+}
+
+/*TRACK LIST*/
+
+.list-group-item {
+  background-color: transparent !important;
+}
+.list-group {
+  padding-top: 20px;
+}
+
+ol li a {
+  text-decoration: none;
+}
+.songs p {
+  display: inline-block;
+  padding-right: 20px;
+}
+h6 {
+  padding-left: 25px;
+}
+.duration {
+  margin-left: auto;
+}
+
+/* Other releases section */
+
+.container-release {
+  width: 100%;
+  margin: 5rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+
+.first {
+  background-image: url(./images/release1.jpg);
+}
+.second {
+  background-image: url(./images/release2.jpg);
+}
+.third {
+  background-image: url(./images/release3.jpg);
+}
+.fourth {
+  background-image: url(./images/release4.jpg);
+}
+.fifth {
+  background-image: url(./images/release5.jpg);
+}
+.sixth {
+  background-image: url(./images/release6.jpg);
+}
+
+.release-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 25rem;
+  height: 25rem;
+  margin-bottom: 2rem;
+}
+
+section.two:nth-child(4){
+  border-bottom: 1px solid white;
+  padding-bottom: 10rem;
+}
+
+/* Footer */
+
+/* Up section of footer */
+.footer-up {
+  display:flex;
+  justify-content: space-between;
+  border-bottom: 1px solid white;
+  padding-bottom: 3rem;
+}
+.footer-section {
+  width: 33%;
+}
+.footer-section:last-child h4{
+color:grey;
+
+}
+  
+.email {
+  margin-top: 2rem;
+  border-bottom: 1px solid grey;
+}
+.email [value], .input{
+  font-style: italic;
+    font-size: 1.5rem;
+  color: white;
+  background-color:transparent;
+  border: none;
+}
+.email a:hover {
+  color:black;
+  background-color:white;
+}
+.email input {
+  width:70%;
+}
+.input{
+  width: 30%;
+  padding:0.5rem;
+}
+
+/* Down section of footer */
+.footer-down {
+  margin: 5rem 0 10rem;
+  display:flex;
+  justify-content: space-between;
+}
+.column-three p{
+  font-style: italic;
+  font-size: 1.3rem;
+  text-transform: none;
+  text-align: center;
+}
+.column-three p:first-child {
+  margin-bottom: 2rem;
+}
+
+/* Responsivity */
+
+ @media only screen and (max-width: 980px) {
+
+   /* Album presentation section */
+
+  section.one {
+    display: flex;
+    flex-wrap:nowrap;
+    flex-direction: column;
+  }
+
+  .container {
+    width: 100%;
+  }
+  .container:nth-of-type(1) {
+    margin: 0 0 2rem;
+  }
+  /* Footer */
+
+/* Up section of footer */
+.footer-up {
+  display:block;
+}
+.footer-section {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.footer-section:last-child h4{
+color:grey;
+
+}
+  
+.email {
+  margin-top: 2rem;
+  border-bottom: 1px solid grey;
+}
+.email [value], .input{
+  font-style: italic;
+    font-size: 1.5rem;
+  color: white;
+  background-color:transparent;
+  border: none;
+}
+.email a:hover {
+  color:black;
+  background-color:white;
+}
+.email input {
+  width:70%;
+}
+.input{
+  width: 30%;
+  padding:0.5rem;
+}
+
+/* Down section of footer */
+.footer-down {
+  margin: 5rem 0 10rem;
+  display:flex;
+  justify-content: space-between;
+}
+.column-three p{
+  font-style: italic;
+  font-size: 1.3rem;
+  text-transform: none;
+  text-align: center;
+}
+.column-three p:first-child {
+  margin-bottom: 2rem;
+}
+
+} 
+
+
+
+
+
